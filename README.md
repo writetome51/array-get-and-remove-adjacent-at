@@ -1,0 +1,1 @@
+Function removes and returns adjacent array items beginning at specified index.
