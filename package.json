@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "keywords": [
     "array",
     "manipulation",
@@ -17,7 +16,6 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "basic-data-handling": "latest",
     "@writetome51/array-and-index-validation": "latest"
   }
 }
