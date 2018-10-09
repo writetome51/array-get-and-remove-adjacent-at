@@ -10,6 +10,9 @@
     "array",
     "manipulation",
     "remove",
+    "get",
+    "adjacent",
+    "items",
     "data"
   ],
   "author": "Steve Thompson",
