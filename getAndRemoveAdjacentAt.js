@@ -8,6 +8,9 @@ var errorIfArrayTooShortToMeetAdjacentItemsRequest_1 = require("@writetome51/arr
 function getAndRemoveAdjacentAt(startingIndex, howManyToRemove, array) {
     errorIfIndex_howMany_andArray_areNotValid_1.errorIfIndex_howMany_andArray_areNotValid(startingIndex, howManyToRemove, array);
     errorIfArrayTooShortToMeetAdjacentItemsRequest_1.errorIfArrayTooShortToMeetAdjacentItemsRequest(startingIndex, howManyToRemove, array);
-    return array.splice(startingIndex, howManyToRemove);
+    if (howManyToRemove > 0)
+        return array.splice(startingIndex, howManyToRemove);
+    else
+        throw new Error('The number of items to remove must be greater than zero');
 }
 exports.getAndRemoveAdjacentAt = getAndRemoveAdjacentAt;

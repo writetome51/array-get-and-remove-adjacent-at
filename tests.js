@@ -76,19 +76,19 @@ else
 // Test 7
 var errorsTriggered = 0;
 try {
-    getAndRemoveAdjacentAt_1.getAndRemoveAdjacentAt();
+    getAndRemoveAdjacentAt_1.getAndRemoveAdjacentAt(); // needs arguments
 }
 catch (e) {
     ++errorsTriggered;
 }
 try {
-    getAndRemoveAdjacentAt_1.getAndRemoveAdjacentAt(arr, 1, 2);
+    getAndRemoveAdjacentAt_1.getAndRemoveAdjacentAt(arr, 1, 2); // first arg must be integer
 }
 catch (e) {
     ++errorsTriggered;
 }
 try {
-    getAndRemoveAdjacentAt_1.getAndRemoveAdjacentAt('', 2, arr);
+    getAndRemoveAdjacentAt_1.getAndRemoveAdjacentAt('', 2, arr); // first arg must be integer
 }
 catch (e) {
     ++errorsTriggered;
@@ -117,19 +117,13 @@ try {
 catch (e) {
     ++errorsTriggered;
 }
-if (errorsTriggered === 7)
+try {
+    getAndRemoveAdjacentAt_1.getAndRemoveAdjacentAt(-1, 0, arr); // howMany can't be zero.
+}
+catch (e) {
+    ++errorsTriggered;
+}
+if (errorsTriggered === 8)
     console.log('test 7 passed');
 else
     console.log('test 7 failed');
-// Test 8: should return empty array when requesting 0 items:
-var length = arr.length;
-var result = getAndRemoveAdjacentAt_1.getAndRemoveAdjacentAt(0, 0, arr);
-if (Array.isArray(result) && result.length === 0)
-    console.log('test 8 passed');
-else
-    console.log('test 8 failed');
-// Test 9: after previous test, array's length should be the same:
-if (arr.length === length)
-    console.log('test 9 passed');
-else
-    console.log('test 9 failed');

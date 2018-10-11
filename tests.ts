@@ -1,5 +1,4 @@
 import { getAndRemoveAdjacentAt } from './getAndRemoveAdjacentAt';
-import get = Reflect.get;
 
 
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -74,19 +73,19 @@ else console.log('test 6B failed');
 // Test 7
 let errorsTriggered = 0;
 try {
-	getAndRemoveAdjacentAt();
+	getAndRemoveAdjacentAt(); // needs arguments
 }
 catch (e) {
 	++errorsTriggered;
 }
 try {
-	getAndRemoveAdjacentAt(arr, 1, 2);
+	getAndRemoveAdjacentAt(arr, 1, 2); // first arg must be integer
 }
 catch (e) {
 	++errorsTriggered;
 }
 try {
-	getAndRemoveAdjacentAt('', 2, arr);
+	getAndRemoveAdjacentAt('', 2, arr); // first arg must be integer
 }
 catch (e) {
 	++errorsTriggered;
@@ -115,17 +114,11 @@ try {
 catch (e) {
 	++errorsTriggered;
 }
-if (errorsTriggered === 7) console.log('test 7 passed');
+try {
+	getAndRemoveAdjacentAt(-1, 0, arr); // howMany can't be zero.
+}
+catch (e) {
+	++errorsTriggered;
+}
+if (errorsTriggered === 8) console.log('test 7 passed');
 else console.log('test 7 failed');
-
-
-// Test 8: should return empty array when requesting 0 items:
-let length = arr.length;
-let result = getAndRemoveAdjacentAt(0,0,arr);
-if (Array.isArray(result) && result.length === 0) console.log('test 8 passed');
-else console.log('test 8 failed');
-
-
-// Test 9: after previous operation removing 0 items, array's length should be the same:
-if (arr.length === length) console.log('test 9 passed');
-else console.log('test 9 failed');

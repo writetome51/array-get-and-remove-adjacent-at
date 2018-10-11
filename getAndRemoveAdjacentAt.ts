@@ -11,5 +11,6 @@ import { errorIfArrayTooShortToMeetAdjacentItemsRequest }
 export function getAndRemoveAdjacentAt(startingIndex, howManyToRemove, array): any[] {
 	errorIfIndex_howMany_andArray_areNotValid(startingIndex, howManyToRemove, array);
 	errorIfArrayTooShortToMeetAdjacentItemsRequest(startingIndex, howManyToRemove, array);
-	return array.splice(startingIndex, howManyToRemove);
+	if (howManyToRemove > 0) return array.splice(startingIndex, howManyToRemove);
+	else throw new Error('The number of items to remove must be greater than zero');
 }
