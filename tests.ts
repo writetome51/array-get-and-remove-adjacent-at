@@ -115,10 +115,16 @@ catch (e) {
 	++errorsTriggered;
 }
 try {
+	getAndRemoveAdjacentAt(6, 1, arr);
+}
+catch (e) {
+	++errorsTriggered;
+}
+try {
 	getAndRemoveAdjacentAt(-1, 0, arr); // howMany can't be zero.
 }
 catch (e) {
 	++errorsTriggered;
 }
-if (errorsTriggered === 8) console.log('test 7 passed');
+if (errorsTriggered === 9) console.log('test 7 passed');
 else console.log('test 7 failed');
