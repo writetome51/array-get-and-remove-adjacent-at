@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var index_1 = require("../index");
+var index_1 = require("./index");
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // Test 1
 var removed = index_1.getAndRemoveAdjacentAt(0, 1, arr);
