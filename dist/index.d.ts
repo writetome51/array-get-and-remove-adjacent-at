@@ -1,5 +1,5 @@
 export declare function getAndRemoveAdjacentAt(
 	startingIndex: number,
-	howManyToRemove: number,
+	howMany: number,
 	array: any[]
 ): any[];

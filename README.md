@@ -1,6 +1,6 @@
 # getAndRemoveAdjacentAt(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;startingIndex,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;howMany,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<br>): any[]
 
-Beginning at `startingIndex`, it removes and returns `howMany` adjacent items  from `array`.  
+Beginning at `startingIndex`, it removes and returns `howMany` adjacent items from `array`.  
 `startingIndex` can be positive or negative.
 
 
@@ -29,7 +29,4 @@ removed = getAndRemoveAdjacentAt(-4, 5, arr); // requesting 1 too many items.
 ```
 // if using TypeScript:
 import {getAndRemoveAdjacentAt} from '@writetome51/array-get-and-remove-adjacent-at';
-// if using ES5 JavaScript:
-var getAndRemoveAdjacentAt = 
-    require('@writetome51/array-get-and-remove-adjacent-at').getAndRemoveAdjacentAt;
 ```
