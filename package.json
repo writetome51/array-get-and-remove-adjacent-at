@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/array-get-and-remove-adjacent-at",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Function removes and returns adjacent array items beginning at specified index",
   "type": "module",
   "main": "index.js",
@@ -29,7 +29,6 @@
   "homepage": "https://github.com/writetome51/array-get-and-remove-adjacent-at#readme",
   "devDependencies": {},
   "dependencies": {
-    "error-if-index-how-many-or-array-are-not-valid": "^2.0.1",
-    "error-if-array-too-short-to-meet-adjacent-items-request": "^2.0.0"
+    "@writetome51/validate-adjacent-items-operation-args": ">=0.0.1"
   }
 }

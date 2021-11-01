@@ -4,16 +4,12 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // Test 1
 let removed = getAndRemoveAdjacentAt(0, 1, arr);
-if (removed.length === 1 && removed[0] === 1)
-    console.log('test 1 passed');
-else
-    console.log('test 1 FAILED');
+if (removed.length === 1 && removed[0] === 1) console.log('test 1 passed');
+else console.log('test 1 FAILED');
 
 // Test 1B
-if (arr.length === 9 && arr[0] === 2)
-    console.log('test 1B passed');
-else
-    console.log('test 1B FAILED');
+if (arr.length === 9 && arr[0] === 2) console.log('test 1B passed');
+else console.log('test 1B FAILED');
 
 // Test 2
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
