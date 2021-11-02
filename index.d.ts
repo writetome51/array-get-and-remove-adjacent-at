@@ -1,5 +1,5 @@
-export declare function getAndRemoveAdjacentAt<T>(
+export declare const getAndRemoveAdjacentAt: <T>(
 	startingIndex: number,
 	howMany: number,
 	array: T[]
-): T[];
+) => T[];

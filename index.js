@@ -6,7 +6,7 @@ import {validateAdjacentItemsOperationArgs}
 // This does strict type-checking for all 3 parameters.
 // `startingIndex` can be negative or positive.
 
-export function getAndRemoveAdjacentAt(startingIndex, howMany, array) {
+export const getAndRemoveAdjacentAt = (startingIndex, howMany, array) => {
 	validateAdjacentItemsOperationArgs(startingIndex, howMany, array);
 	return array.splice(startingIndex, howMany);
 }
